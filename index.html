@@ -1,0 +1,1006 @@
+<html>
+    <head>
+        <title>Strawberry Fantasy</title>
+      <style>
+              .header {
+            display: flex;
+            justify-content: space-between; /* Adjust spacing */
+            align-items: center; /* Center vertically */
+            padding: 20px;
+            background-color:rgb(252, 8, 138);
+            color: white;
+            padding-left: 50px;
+            font-size: 19;
+        }
+        .contact{
+            padding-right: 300px;
+        }
+        .header div {
+            margin: 0 35px; /* Add margin between elements */
+        }
+        .search-box {
+            display: flex; /* Use flex for input and button */
+            align-items: center; /* Center vertically */
+        }
+        .search-box input {
+            padding: 5px; /* Padding for the input field */
+            border: 1px solid #ccc; /* Border for the input field */
+            border-radius: 4px; /* Rounded corners for the input */
+        }
+        .search-box button {
+            padding: 6px ; /* Padding for the button */
+            margin-left: 5px; /* Space between input and button */
+            border: none; /* Remove default border */
+            background-color: #007BFF; /* Button color */
+            color: white; /* Text color */
+            border-radius: 4px; /* Rounded corners for the button */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .search-box button:hover {
+            background-color: #0056b3; /* Darken button on hover */
+        }
+     .search-container {
+            position: relative; /* Needed for absolute positioning of the icon */
+            width: 300px; /* Width of the search box */
+        }
+        .search-container input {
+            width: 100%; /* Full width */
+            padding: 10px 40px 10px 40px; /* Padding for input */
+            border: 1px solid grey; /* Border for the input */
+            border-radius: 2px; /* Rounded corners */
+            font-size: 13px; /* Font size */
+        }
+        .search-container .search-icon {
+            position: absolute; /* Position it inside the input */
+            left: 10px; /* Space from the left */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for vertical centering */
+            color: #aaa; /* Icon color */
+        }
+ .menu_bar{
+z-index: 2;
+        background-color: white;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+    padding-bottom: 50px;
+            }
+    .menu_bar ul{
+        list-style: none;
+        display: flex;
+    padding-top: 50px;
+    z-index: 2;
+    }
+    .menu_bar ul li{
+        padding: 10px 40px;
+        position:relative;
+    }
+    .menu_bar ul li a{
+ color:#6185ac;
+    text-decoration: none;
+    font-size: 15px;
+font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.3s;
+}
+.menu_bar ul li a:hover{
+    color: rgb(226, 75, 125);
+}
+.dropdown_menu{
+    display: none;
+}
+.menu_bar ul li:hover .dropdown_menu{
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: white;
+    }
+    .menu_bar ul li:hover .dropdown_menu ul{
+        display: block;
+        margin: 10px;
+}
+    .menu_bar ul li:hover .dropdown_menu ul li{
+    width: 200;
+        padding: 10px;
+    }
+    .dropdown_menu ul li a:hover{
+        text-decoration: underline;
+    }
+    .sub_menu{
+        background-color: white;
+        }
+    .col{
+        background-color: white;
+         }
+     .menu_bar ul li .sub_menu {
+        position: absolute;
+    width: 100%;
+    left: 0;
+    background: white;
+     visibility: hidden;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    line-height: 24px;
+    margin-left: 200px;
+     }
+    .menu_bar ul li .sub_menu .col img{
+        width: 250px;
+padding-left: 40px;
+margin-left: -30px;
+ }
+    .menu_bar ul li:hover .sub_menu{
+        background-color: white;
+        visibility: visible;
+    }
+    .menu_bar ul li .sub_menu  h3{
+        background-color: white;
+      justify-content: center;
+font-size: 20;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin-left: 80;
+    }
+    .menu_bar h2 a{
+        margin:inline;
+        text-decoration: none;
+    font-size: 25;
+        font-style: italic;
+      color:#6185ac;
+    }
+    .menu_bar h2 a:hover{
+        text-decoration: underline;
+        color: #426281;
+        background-color: white;
+    }
+     h4{
+    color:rgb(58, 55, 55);
+    margin-left: 40px;
+    margin-left: 80px;
+background-color: white;
+ }
+      h4{
+    color:rgb(58, 55, 55);
+    margin-left: 40px;
+    margin-left: 80px;
+background-color: white;
+}
+.image img{
+    width: 1330px;
+    height: 500px;
+    object-fit: cover;
+}
+.content{
+        width: 45%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: white;
+    display: flex;
+    flex-direction: column;
+margin-left: 50px;
+margin-top: 260px;
+}
+.h1{
+    margin-top: 0;
+    padding-left: 50px;
+    padding-top: 30px;
+    color: rgb(212, 35, 130);
+    font-size: 60;
+font-weight: 900;
+    font-style:oblique;
+}
+.h2{
+padding-left: 50px;
+font-weight: 600;
+font-size: 30px;
+}
+.b1{
+        background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 80px;
+color: white;
+font-size: 18px;
+}
+.b1:hover{
+background-color:  rgb(156, 17, 91);
+}
+.h3{
+    color:#6185ac;
+font-size: 37px;
+margin-left: 380px;
+margin-top: 30px;
+}
+.cover{
+display: flex;
+}
+.box{
+width: 300px;
+height: 300px;
+box-shadow: -1px 0 10px #000000;
+align-items: center;
+justify-content: center;
+margin-left: 120px;
+background:rgb(212, 35, 130);
+color: white;
+text-align: center;
+word-spacing: 3;
+line-height: 1;
+}
+.img{
+    display: flex;
+}
+.box1{
+width: 300px;
+height: 300px;
+box-shadow: -1px 0 10px #000000;
+align-items: center;
+justify-content: center;
+margin-left:100px;
+background:#007BFF;
+color: white;
+text-align: center;
+word-spacing: 3;
+line-height: 1;
+}
+.box2{
+width: 300px;
+height: 300px;
+box-shadow: -1px 0 10px #000000;
+align-items: center;
+justify-content: center;
+margin-left: 100px;
+background: rgb(3, 124, 3);
+color: white;
+text-align: center;
+word-spacing: 3;
+line-height: 1;
+}
+.h5{
+    font-size: 30px;
+    }
+.h6{
+    font-size: 30px;
+}
+.heading{
+    margin-top: 100px;
+    margin-left: 500px;
+    font-size: 40px;
+text-decoration-line:underline;
+text-decoration-style:wavy;
+padding-bottom: 40px;
+text-decoration-color: rgb(216, 59, 143);
+   }
+.container {
+            display: flex;
+            margin: 20px;
+            align-items: center;
+            margin-left: 100px;
+            font-size: 20;
+            margin-right: 50px;
+        }
+        .container img {
+            margin-top: 50px;
+            width: 600px;
+            height: auto;
+            margin-right: 100px;
+        }
+        .container.reverse {
+            flex-direction: row-reverse;
+         }
+        .text {
+        max-width: 400px;
+            margin-right: 100px;
+                }
+          .b2{
+    background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 80px;
+color: white;
+font-size: 18px;
+align-items: center;
+          }
+          .b2:hover{
+background-color:  rgb(156, 17, 91);
+
+          }
+          .b3{
+    background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 80px;
+color: white;
+font-size: 18px;
+align-items: center;
+          }
+          .b3:hover{
+background-color:  rgb(156, 17, 91);
+
+          }
+         .amount{
+            margin-left: 300px;
+            font-size: 26;
+           color: #007BFF;
+         }
+         .amount1{
+            font-size: 23;
+           color: #007BFF;
+         }
+.h8{
+    color:rgb(58, 55, 55);
+    margin-left: 35px;
+width: 180px;
+background-color: white;
+font-size: large;
+     }
+     .h9{
+            font-size: 30;
+           color: #007BFF;
+           text-align: center; 
+margin-left: 2px;
+     }
+     .b4{
+    background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 45px;
+color: white;
+font-size: 18px;
+align-items: center;
+     }
+     .b4:hover{
+background-color:  rgb(156, 17, 91);
+
+     }
+     .b5{
+        background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 45px;
+color: white;
+font-size: 18px;
+align-items: center;
+     }
+     .b5:hover{
+background-color:  rgb(156, 17, 91);
+
+     }
+     .h10{
+        margin-top: 64px;
+        font-size: 30;
+           color: #007BFF;
+         }
+   .container1{
+    background: #3d3b3b;
+    color: white;
+    display: flex;
+   }
+   .container2{
+    padding-left: 100px;
+   }
+   .h13{
+    font-size: 50px;
+    margin-left: 55px;
+    margin-top: 70px;
+   }
+   .h14{
+    font-size: 30px;
+    width: 200px;
+    margin-bottom: 70px;
+    text-align: center;
+   }
+   .container3{
+    padding-left: 300px;
+   }
+   .container4{
+    padding-left: 250px;
+   }
+   .h15{
+    font-size: 50px;
+    margin-left:90px;
+    margin-top: 70px;
+   }
+   .h16{
+    color: deeppink;
+    margin-left: 80px;
+    margin-top: -50px;
+   }
+  .word{
+    display: flex;
+    margin-left: 60px;
+   
+  }
+ 
+ 
+   .row{
+margin-left: 35px;
+
+   }
+  
+  .picture img{
+    transition: opacity 0.3s ease;
+  }
+ 
+ 
+ 
+  .h17{
+    width: 200px;
+    margin-left: 50;
+    font-size: 20;
+    }
+  .h18{
+    width: 200px;
+    margin-left: 50;
+    font-size: 17;
+
+  }
+ 
+  
+  .h19{
+    font-size: 30px;
+    color: #007BFF;
+    margin-left: 60px;
+    margin-top: 50px;
+  }
+  .h20{
+    font-size: 30px;
+    color: #007BFF;
+    margin-top: 82px;
+    margin-left: 60px;
+  }
+  .b6{
+        background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 45px;
+color: white;
+font-size: 18px;
+align-items: center;
+margin-bottom: 80px;
+  }
+  .b6:hover{
+background-color:  rgb(156, 17, 91);
+
+  }
+  .b7{
+        background-color: rgb(212, 35, 130);
+width: 200px;
+border-radius: 200px;
+height: 50px;
+border-color:  rgb(212, 35, 130);
+margin-top: 0px;
+margin-left: 45px;
+color: white;
+font-size: 18px;
+align-items: center;
+margin-bottom: 80px;
+  }
+  .b7:hover{
+background-color:  rgb(156, 17, 91);
+
+  }
+  .featured-product{
+font-size: 60px;
+padding-left: 450px;
+text-decoration-line: underline;
+text-decoration-style: wavy ;
+text-decoration-color: rgb(212, 35, 130);
+padding-bottom: 30px;
+  }
+  .new{
+
+    display: flex;
+    transition-property: background-color;
+transition-duration: 1s;
+transition-delay: 0.5s;
+/* For safari browser */
+-webkit-transition-property: background-color;
+-webkit-transition-duration: 2s;
+-webkit-transition-delay: 0.5s;
+}
+  
+.new:hover{
+    background-color:yellowgreen;
+  }
+  
+  .product{
+margin-left: 35px;
+margin-right: 30px;
+   }
+  
+   .new-1{
+    display: flex;
+    margin-left: 60px;
+  }
+   .product-1{
+margin-left: 35px;
+   }
+ .screen{
+    background-color: #3a3939;
+    padding-top: 100px;
+    padding-left: 300px;
+    padding-bottom: 100px;
+ }
+ .latest{
+    font-size: 40px;
+padding-left: 500px;
+text-decoration-line: underline;
+text-decoration-style: wavy ;
+text-decoration-color: rgb(212, 35, 130);
+padding-bottom: 30px;
+ }
+ .small{
+    width: 500px;
+    color: #3d3b3b;
+    font-size: 20;
+    padding-left: 60px;
+    display: flex;
+ }
+ .small-product-1{
+    font-size: 30px;
+    color:#007BFF;
+    text-decoration: none;
+ }
+ .small-product-1:hover{
+    text-decoration: underline;
+    color:#6185ac;
+ }
+ .small-product2{
+margin-left: 100px;
+ }
+ .small2{
+    width: 500px;
+    color: #3d3b3b;
+    font-size: 20;
+    padding-left: 60px;
+    display: flex;
+    padding-top: 60px;
+ }
+ footer{
+    padding-top: 10px;
+        background-color:#3b3c3d;
+        color: #fff;
+     text-align: left;
+    }
+    .footer-container{
+        margin-left: 20px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color:white;
+    }
+    .footer-section{ 
+        margin-left: 20px;
+        line-height: 2;
+        flex: 1;
+        margin: 10px;
+    }
+    .footer-section h2{
+        margin-left: 50px;
+        margin-bottom: 15px;
+    }
+    .footer-section a{
+    text-decoration: none;
+        margin-left: 50px;
+        color: #ccc8c8;
+font-size:17;
+        display: block;
+        margin-bottom: 10px;
+}
+    .footer-section a:hover{
+        color: #888c91;
+    }
+    .social-icons{
+            margin-right: 80px;
+        font-size: larger;
+padding-top: 20px;
+        display:block;
+        gap: 10px;
+        justify-content: center;
+        row-gap: 10px;
+    }
+    .social-icons a{
+        color: #fff;
+        font-size: 25px;
+margin-top: 10px;
+margin-left: 17px;
+    justify-content: center;
+        row-gap: 10px;
+    }
+    .social-icons a:hover{
+        color:#888c91 ;
+    }
+  
+    .one{
+        color: #ccc8c8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    .section2{
+        color: #ccc8c8;
+    }
+    .section3{
+        font-size: 17px;
+        margin-left: 80px;
+    }
+    .suc{
+    margin-left: 20px;
+margin-top: 30px;
+        display: flex;
+    }
+</style>
+        <body>
+            <header>
+                <div class="header">
+                <div class="location">
+                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><span><i class="fas fa-map-marker-alt"></i>Mahalingapuram,Pollachi.</span>
+                </div>
+                <div class="Contact">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<span><i class="fas fa-phone"></i> +91 97246 62263</span>
+</div>
+<div class="search-container">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" placeholder="Search and hit return...">
+</div>
+        </div>
+            </header>
+            <nav>
+                <div class="menu_bar">
+                                    <h2><a href="#"><i class="fas fa-cake"></i>la tarta</a></h2>
+                     <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">HOT</a>
+                    <div class="sub_menu">
+                        <div class="col">
+                      <img src="images/small-product-2.jpg">
+                      <h3>Chocolate cake with  berries.and fruits</h3>
+                       <h4>Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h4>
+                        </div>
+                        <div class="col">
+                            <img src="images/small-product-1.jpg">
+                            <h3>Rolled pancakes with banana</h3>
+                            <h4>
+                                Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my company thought wishing colonel it
+                            </h4>
+                                    </div>
+                                    <div class="col">
+                                        <img src="images/small-product-6.jpg">
+                                        <h3>Chocolate cake with  berries.and fruits</h3>
+                                        <h4>Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h4>
+                                                </div>
+                                                <div class="col">
+                                                    <img src="images/small-product-3.jpg">
+                                                    <h3>Cheese cake with berries.and fruits</h3>
+                                                    <h4>Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression.</h4>
+                                                            </div>
+                    </div>
+                  </li>
+                <li><a href="#">PAGES<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                                            <li><a href="Blog.html">Blog list posts</a></li>
+                        <li><a href="blog.html">Blog single post</a></li>
+                        <li><a href="Catalog.html">Catalog grid</a></li>
+                        <li><a href="about us1.html">About us</a></li>
+                        <li><a href="Shopping.html">Shopping cart</a></li>
+                    </ul>
+                </div>
+                </li>
+                    <li><a href="catalog.html">CATALOG</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="about us1.html">ABOUT US</a></li>
+                 
+                            <li><a href="shopping.html"><i class="fas fa-shopping-cart"></i><i class="fas fa-caret-down"></i></a>
+                                    </li>
+                </ul> 
+                </div> 
+                </div>
+            </nav>
+    <section>
+            <div class="wrapper">
+            <div class="image">
+                <img src="images/slider-1.jpg">
+<div class="content">
+    <ul>
+            <ol class="h1">Strawberry fantasy</ol>
+            <ol class="h2">Fruit desert with nuts</ol>
+            <ol class="h3">Rs. 17.50</ol>
+        </ul>
+        <button class="b1">ADD TO CART</button>
+        </div>
+            </div>
+        </div>
+       <div class="cover">
+        <div class="box">
+    <img src="images/Screenshot 2024-10-02 111348.png">
+    <h2 class="h6">cake</h2>
+            <p>From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded incommode.
+        </p>
+        </div>
+               <div class="box1">
+            <img src="images/ribbon-puff.png">
+            <h2 class="h5">Puff pastry</h2>
+            <p>To they four in love. Settling you has separate supplied bed. Concluded resembled suspected his resources curiosity joy. Led all cottage met enabled
+     </p>
+        </div>
+        <div class="box2">
+            <img src="images/pretzels.png">
+            <h2 class="h5"> Pretzels</h2>
+            <p>Him ham although thoughts entirely drawings. Acceptance unreserved old admiration projection nay yet him. Lasted am so before on esteem vanity oh.
+                            </p>
+        </div>
+      </div>
+       <div class="heading">
+        <h1>New Products</h1>
+       </div>
+<div class="container">
+        <img src="images/new-product-1.jpg" alt="Image 1">
+        <div class="text">
+            <h2>Rolled pancakes with banana</h2>
+            <p>Piqued favour stairs it enable exeter as seeing. Remainder met improving but engrossed sincerity age. Better but length gay denied abroad are. Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</p>
+            <p class="amount1">Rs. 12.50</p>
+            <button class="b3">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="container reverse">
+        <img src="images/new-product-2.jpg" alt="Image 2">
+        <div class="text">
+            <h2>Assorted browniesc</h2>
+            <p>He went such dare good mr fact. The small own seven saved man age no offer. Suspicion did mrs nor furniture smallness. Scale whole downs often leave not eat. An expression reasonably cultivated indulgence mr he surrounded instrument. Gentleman eat and consisted are pronounce distrusts.</p>
+   <p class="amount">Rs. 12.50</p>
+            <button class="b3">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="word">
+        <div class="row">
+<div class="picture">
+      <img src="images/small-product-5.jpg" class="default">
+    
+    </div>
+      <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+      <h4 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h4>
+        <h4 class="h19">Rs. 12.50</h4>
+        <button class="b6">ADD TO CART</button>
+    </div>
+        <div class="row">
+            <div class="picture">
+
+            <img src="images/small-product-1.jpg" class="default">
+    
+    </div>
+            <h3 class="h17">Rolled pancakes with banana</h3>
+            <h4 class="h18">
+                Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my company thought wishing colonel it
+            </h4>
+        <h4 class="h20">Rs. 17.50</h4>
+        <button class="b7">ADD TO CART</button>
+                            </div>
+                    <div class="row">
+                        <div class="picture">
+                        <img src="images/small-product-6.jpg" class="default">
+                        
+    </div>
+                        <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+                        <h4 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h4>
+        <h4 class="h19">Rs. 8.50</h4>
+        <button class="b6">ADD TO CART</button>
+                                        </div>
+                                <div class="row">
+                                    <div class="picture">
+                                    <img src="images/small-product-3.jpg" class="default">
+                                    
+    </div>
+                                    <h3 class="h17">Cheese cake with berries.and fruits</h3>
+                                    <h4 class="h18">Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression.</h4>
+        <h4 class="h19">Rs. 17.50</h4>
+        <button class="b6">ADD TO CART</button>
+                            </div>
+    </div>
+                            <div class="container1">
+        <div class="container2">
+         <p class="h13">292</p>
+         <p class="h16">_____</p>
+         <p class="h14">clients served every day</p>
+        </div>
+        <div class="container3">
+            <p class="h13">798</p>
+            <p class="h16">_____</p>
+            <p class="h14">goods in our store</p>
+           </div>
+           <div class="container4">
+            <p class="h15">5</p>
+            <p class="h16">_____</p>
+            <p class="h14">years of experience</p>
+           </div>
+           </div>
+       <h1 class="featured-product">Featured Products
+</h1>
+<div class="suc">
+<div class="new">
+
+        <div class="product">
+      <img src="images/small-product-1.jpg">
+     
+      <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+          <h3 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h3>
+        <h3 class="h19">RS. 12.50</h3>
+    
+        <button class="b6">ADD TO CART</button>
+</div>
+</div>
+<div class="new">
+        <div class="product">
+            <img src="images/small-product-2.jpg">
+            <h3 class="h17">Rolled pancakes with banana</h3>
+            <h3 class="h18">
+                Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my company thought wishing colonel it
+            </h3>
+        <h3 class="h20">Rs. 17.50</h3>
+        <button class="b7">ADD TO CART</button>
+    </div>
+                                </div>
+                                <div class="new">
+                    <div class="product">
+                        <img src="images/small-product-3.jpg">
+                        <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+                        <h3 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h3>
+        <h3 class="h19">Rs. 8.50</h3>
+        <button class="b6">ADD TO CART</button>
+    </div>
+                                    </div>
+                                    <div class="new">
+                                <div class="product">
+                                    <img src="images/small-product-4.jpg">
+                                    <h3 class="h17">Cheese cake with berries.and fruits</h3>
+                                    <h3 class="h18">Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression.</h3>
+        <h3 class="h19">Rs. 17.50</h3>
+        <button class="b6">ADD TO CART</button>
+                                </div>
+                                </div>
+    </div>
+    <div class="suc">
+    <div class="new">
+        <div class="product">
+      <img src="images/small-product-5.jpg">
+      <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+    <h3 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h3>
+        <h3 class="h19">Rs. 12.50</h3>
+        <button class="b6">ADD TO CART</button>
+</div>
+    </div>
+    <div class="new">
+        <div class="product">
+            <img src="images/small-product-6.jpg">
+            <h3 class="h17">Rolled pancakes with banana</h3>
+            <h3 class="h18">
+                Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my company thought wishing colonel it
+            </h3>
+        <h3 class="h20">Rs. 17.50</h3>
+        <button class="b7">ADD TO CART</button>
+                            </div>
+    </div>
+    <div class="new">
+                    <div class="product">
+                        <img src="images/small-product-2.jpg">
+                        <h3 class="h17">Chocolate cake with  berries.and fruits</h3>
+                        <h3 class="h18">Attachment astonished to on appearance imprudence so collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit enjoy forth.</h3>
+        <h3 class="h19">Rs. 8.50</h3>
+        <button class="b6">ADD TO CART</button>
+                    </div>
+                                        </div>
+                                        <div class="new">
+                                <div class="product">
+                                    <img src="images/small-product-5.jpg">
+                                    <h3 class="h17">Cheese cake with berries.and fruits</h3>
+                                    <h3 class="h18">Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression.</h3>
+        <h3 class="h19">Rs. 17.50</h3>
+        <button class="b6">ADD TO CART</button>
+                            </div>
+                        </div>
+</div>
+</div>
+<div class="screen">
+    <img src="images/screen.png">
+</div>
+<div class="latest">
+    <h1>Latest from Blog</h1>
+</div>
+<div class="small">
+<div class="small-product">
+    <img src="images/small-post-1.jpg">
+    <a  class="small-product-1" href="#">Cooking for dummies</a>
+    <p class="19">Advanced extended doubtful he he blessing together. Introduced far law gay considered frequently entreaties difficulty. Eat him four are rich nor calm. By an packages rejoiced exercise. To ought on am marry rooms doubt music. Mention entered an through company as. Up arrived no painful between. It declared is prospect an insisted pleasure.</p>
+</div>
+<div class="small-product2">
+    <img src="images/small-post-2.jpg">
+    <a  class="small-product-1" href="#">Cooking for dummies</a>
+    <p class="19">Advanced extended doubtful he he blessing together. Introduced far law gay considered frequently entreaties difficulty. Eat him four are rich nor calm. By an packages rejoiced exercise. To ought on am marry rooms doubt music. Mention entered an through company as. Up arrived no painful between. It declared is prospect an insisted pleasure.</p>
+</div>
+</div>
+<div class="small2">
+    <div class="small-product">
+        <img src="images/small-post-3.jpg">
+        <a  class="small-product-1" href="#">Cooking for dummies</a>
+        <p class="19">Advanced extended doubtful he he blessing together. Introduced far law gay considered frequently entreaties difficulty. Eat him four are rich nor calm. By an packages rejoiced exercise. To ought on am marry rooms doubt music. Mention entered an through company as. Up arrived no painful between. It declared is prospect an insisted pleasure.</p>
+    </div>
+    <div class="small-product2">
+        <img src="images/small-post-4.jpg">
+        <a  class="small-product-1" href="#">Cooking for dummies</a>
+        <p class="19">Advanced extended doubtful he he blessing together. Introduced far law gay considered frequently entreaties difficulty. Eat him four are rich nor calm. By an packages rejoiced exercise. To ought on am marry rooms doubt music. Mention entered an through company as. Up arrived no painful between. It declared is prospect an insisted pleasure.</p>
+    </div>
+    </div>
+
+ </section>
+ <footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="footer-container">
+    <div class="footer-section">
+        <h2>Contacts</h2>
+        <a>Mahalinga puram,Pollachi.</a>
+        <a>+91 97246 62263</a>
+        <a>sales@example.com</a>
+    </div>
+    <div class="footer-section">
+        <h2>Your account</h2>
+        <p><a href="#"> (Logout)</a></p>
+        <a href="#">My cart</a>
+        <a href="#">Orders history</a>
+        <a href="#">Billing details</a>
+        <a href="#">Delivery details</a>
+</div>
+    <div class="footer-section">
+        <h2>Links</h2>
+        <a href="#">Catalog</a>
+        <a href="#">Delivery</a>
+        <a href="#">Payment</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
+        <a href="#">Terms of usage</a>
+    </div>
+    <div class="social-icons">
+        <h2>Social media</h2>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        <p class="one">Latest from Instagram</p>
+    </div>
+   </div>
+    <div class="section2">
+        <div class="section3">
+        <h2>We accept:</h2>
+        <img src="images/visa.png">
+        <img src="images/mastercard.png">
+        <img src="images/american-express.png">
+        <img src="images/paypal.png">
+    </div>
+        </div>
+  
+</footer>
+        </body>  
+      </head>
+</html>
